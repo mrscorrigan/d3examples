@@ -43,7 +43,7 @@
 
     <div class="col-md-6">
 <pre>
-    var dataset = [ 5, 10, 20, 20, 6, 25 ];
+    var dataset = [ 13, 2, 18, 1, ];
 
     var w = 500;
     var h = 500;
@@ -90,7 +90,8 @@
 </div>
 
 <script type="text/javascript">
-    var dataset = [ 5, 10, 20, 20, 6, 25 ];
+    var dataset = [ 13, 2, 18, 1];
+    var labels = ["Apple", "Custard", "Steak and Kidney", "Raspberry"];
 
     var w = 500;
     var h = 500;
@@ -129,8 +130,8 @@
                 return "translate(" + arc.centroid(d) + ")";
             })
             .attr("text-anchor", "middle")
-            .text(function(d) {
-                return d.value;
+            .text(function(d, i) {
+                return labels[i] + "(" + d.value + ")";
             });
 </script>
 
